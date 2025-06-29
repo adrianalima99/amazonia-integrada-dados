@@ -19,7 +19,7 @@ Este projeto explora dados climáticos e socioeconômicos de comunidades amazôn
 ## 📦 Fontes de Dados
 - **Climáticos:** Precipitação (prevista e real), temperatura média, umidade do solo, eventos extremos
 - **Socioeconômicos:** Volume de produção agrícola, incidência de doenças, acesso à água potável, segurança alimentar
-
+  
 **Período:** Janeiro a Abril de 2025 (122 registros diários)
 
 ---
@@ -49,27 +49,6 @@ Este projeto explora dados climáticos e socioeconômicos de comunidades amazôn
 
 ---
 
-## 🚨 Problemas Identificados e Corrigidos
-
-### **Correlação Artificial de 0.99 (Produção x Doenças)**
-- **Problema:** Valores extremos (1000 tons, 200 doenças) causavam correlação artificial
-- **Causa:** Erros de digitação e duplicatas não tratadas
-- **Solução:** Implementação de filtros rigorosos e verificação sistemática
-- **Resultado:** Correlação mais realista e estatisticamente válida
-
-### **Outliers Extremos Encontrados**
-- Chuvas reais: 900mm, 1200mm (impossíveis para a região amazônica)
-- Produção: 1000 tons, 2000 tons (erros de digitação evidentes)
-- Doenças: 200, 300 casos (valores irreais para contexto local)
-- Temperatura: 50°C (extremamente alta para a região)
-
-### **Duplicatas Identificadas**
-- Registros com datas idênticas e valores iguais
-- Dados repetidos em diferentes períodos temporais
-- Inconsistências na padronização de categorias
-
----
-
 ## 📊 Exemplos de Visualizações
 
 | <img src="graficos/disp_clima.png" width="300"/> | <img src="graficos/heatmap.png" width="300"/> |
@@ -82,6 +61,26 @@ Este projeto explora dados climáticos e socioeconômicos de comunidades amazôn
 
 ---
 
+## 🔍 Estrutura do Projeto
+
+```
+amazonia-integrada-dados/
+├── main.py                 # Script principal
+├── requirements.txt        # Dependências
+├── README.md              # Documentação
+├── data/                  # Bases de dados
+│   ├── base_climatica.csv
+│   └── base_socioeconomica.csv
+├── src/                   # Módulos de análise
+│   ├── limpeza_dados.py
+│   ├── analise_exploratoria.py
+│   └── visualizacoes.py
+└── graficos/              # Visualizações geradas
+    ├── disp_clima.png
+    ├── heatmap.png
+    └── corr_producao_doencas.png
+```
+---
 ## 🚀 Como Utilizar
 
 ### **1. Clone o repositório:**
@@ -115,57 +114,6 @@ python main.py
 
 ---
 
-## 📋 Saída do Programa
-
-Ao executar `main.py`, você receberá:
-
-```
-=== ANÁLISE AMAZÔNIA INTEGRADA - DADOS MELHORADOS ===
-
-1. Carregando e limpando dados...
-=== VERIFICAÇÃO DE DUPLICATAS E OUTLIERS ===
-Duplicatas em dados climáticos: X
-Duplicatas em dados socioeconômicos: Y
-=== OUTLIERS EXTREMOS IDENTIFICADOS ===
-[Detalhes dos outliers encontrados]
-
-2. Dados após limpeza:
-   - Registros climáticos: X (era Y)
-   - Registros socioeconômicos: X (era Y)
-
-3. Estatísticas Descritivas: Dados Climáticos
-[Estatísticas detalhadas]
-
-4. Estatísticas Descritivas: Dados Socioeconômicos
-[Estatísticas detalhadas]
-
-=== ANÁLISE CORRELAÇÃO PRODUÇÃO x DOENÇAS ===
-Correlação de Pearson: X.XXX (p-valor: X.XXX)
-Correlação de Spearman: X.XXX (p-valor: X.XXX)
-[Interpretação da significância]
-
-=== ANÁLISE COM DADOS NORMALIZADOS ===
-[Correlações normalizadas]
-
-5. Matriz de Correlação (Dados Limpos)
-[Matriz completa]
-
-6. Gerando gráficos melhorados...
-
-✅ Análise concluída!
-📊 Gráficos salvos em /graficos:
-   - disp_clima.png (com linhas de tendência)
-   - heatmap.png (correlações destacadas)
-   - corr_producao_doencas.png (análise específica)
-
-💡 Principais melhorias implementadas:
-   - Remoção de outliers extremos
-   - Verificação de duplicatas
-   - Análise com dados normalizados
-   - Gráficos com linhas de tendência
-   - Heatmap com correlações destacadas
-```
-
 ---
 
 ## 💡 Requisitos
@@ -179,25 +127,6 @@ Correlação de Spearman: X.XXX (p-valor: X.XXX)
 
 ---
 
-## 🔍 Estrutura do Projeto
-
-```
-amazonia-integrada-dados/
-├── main.py                 # Script principal
-├── requirements.txt        # Dependências
-├── README.md              # Documentação
-├── data/                  # Bases de dados
-│   ├── base_climatica.csv
-│   └── base_socioeconomica.csv
-├── src/                   # Módulos de análise
-│   ├── limpeza_dados.py
-│   ├── analise_exploratoria.py
-│   └── visualizacoes.py
-└── graficos/              # Visualizações geradas
-    ├── disp_clima.png
-    ├── heatmap.png
-    └── corr_producao_doencas.png
-```
 
 ---
 
@@ -216,7 +145,6 @@ O projeto visa identificar:
 Desenvolvido para a disciplina de Introdução à Análise de Dados II (I2A2 Academy).
 
 - **Autor:** [Adriana Lima] - [Curso IA Aplicada, I2A2 Academy]
-- **Versão:** 2.0 - Com melhorias de qualidade de dados e visualizações
 - **Data:** 2025
 
 ---
