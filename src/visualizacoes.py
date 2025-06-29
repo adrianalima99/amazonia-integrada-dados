@@ -4,6 +4,8 @@ import seaborn as sns
 # Aplicar tema moderno do seaborn
 sns.set_theme(style="whitegrid")
 
+# Gráficos de dispersão para investigar relações entre variáveis climáticas
+# Justificativa: Responde perguntas como "A produção agrícola diminui com a queda da umidade do solo?"
 def plot_dispersao(df_clima, output_path='graficos/disp_clima.png'):
     fig, axs = plt.subplots(1, 3, figsize=(18, 5))
     fig.suptitle("Gráficos de Dispersão - Variáveis Climáticas", fontsize=16, fontweight='bold', y=1.05)
@@ -32,6 +34,9 @@ def plot_dispersao(df_clima, output_path='graficos/disp_clima.png'):
     plt.tight_layout(rect=[0, 0, 1, 0.95])
     plt.savefig(output_path, bbox_inches='tight', dpi=150)
     plt.close()
+
+# Heatmap de correlação para revelar padrões e clusters entre variáveis
+# Justificativa: Ajuda a responder perguntas sobre relações entre clima, produção e saúde
 
 def heatmap_correlacao(df, output_path='graficos/heatmap.png'):
     corr = df.corr(numeric_only=True)
