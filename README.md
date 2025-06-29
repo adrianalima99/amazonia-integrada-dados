@@ -35,9 +35,11 @@ Os arquivos estão disponíveis na pasta `data/`.
 ---
 
 ## 📊 Exemplos de Visualizações
-| ![Dispersão](graficos/disp_clima.png) | ![Heatmap](graficos/heatmap.png) |
+
+| <img src="https://github.com/user-attachments/assets/edc4be49-1f27-4de6-9438-c5389ebf809f" width="300"/> | <img src="https://github.com/user-attachments/assets/ba564b8c-3359-436b-a632-d69c19f874a2" width="300"/> |
 |:-------------------------------------:|:-------------------------------:|
 | Dispersão entre variáveis climáticas  | Matriz de correlação            |
+
 
 ---
 
