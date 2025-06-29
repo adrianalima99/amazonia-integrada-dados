@@ -75,9 +75,4 @@ Os arquivos estão disponíveis na pasta `data/`.
 ## 👥 Créditos
 Desenvolvido para a disciplina de Introdução à Análise de Dados II (I2A2 Academy).
 
-- Autor: [Seu Nome](https://github.com/seu-usuario)
-
----
-
-## 📄 Licença
-Distribuído sob a licença MIT. Sinta-se à vontade para usar e contribuir!
+- Autor: [Adriana Lima] - [Curso IA Aplicada, I2A2 Academy]
